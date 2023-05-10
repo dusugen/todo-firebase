@@ -6,13 +6,16 @@ import reportWebVitals from "./reportWebVitals";
 import "./firebase";
 import { Provider } from "react-redux";
 import { store } from "./core/store/store";
+import { BrowserRouter } from "react-router-dom";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
 );
 root.render(
-  <Provider store={store}>
-    <App />
-  </Provider>
+  <BrowserRouter>
+    <Provider store={store}>
+      <App />
+    </Provider>
+  </BrowserRouter>
 );
 reportWebVitals();
